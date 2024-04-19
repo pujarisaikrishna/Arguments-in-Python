@@ -1,0 +1,71 @@
+#Positional Arguments
+def add(a,b):
+    print(a-b)
+    print(a+b)
+    print(a*b)
+    print(a/b)
+
+res = add(50, 60)
+print(res)
+
+
+def greet(name,age):
+    print(f"hi my self {name} and i am {age} years old")
+
+greet("Sai Krishna",22)
+
+
+
+#Keyword Arguments
+def msg(name, surname):
+    print("hi", name, surname)
+
+msg(name = "Rohit", surname = "Sharma")
+
+
+def msg(name, surname, age, city):
+    print(name, surname, age, city)
+
+msg(name = "Rohit", surname = "Sharma", age = 35, city = "Delhi")
+
+
+#Default Arguments
+def my_function(country = "Norway"):
+  print("hi I am mark from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+
+
+def fun(name="Drake"):
+    print("hi", name)
+
+fun("Justin")
+
+fun()
+
+
+
+
+#Variable-Length Arguments
+# Non-Keyworded Arguments
+def my_sum(*args):
+  sum = 0
+  for arg in args:
+    sum += arg
+  print("Sum is:")
+  return sum
+
+print(my_sum(1, 2, 3, 4, 5))
+print(my_sum(30.9, 5))
+print(my_sum(40/5, 5))
+
+
+# Keyworded Arguments
+def my_function(**kwargs):
+  for key, value in kwargs.items():
+    print(f"{key}: {value}")
+
+my_function(name="John", age=30, city="New York")
